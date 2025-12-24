@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>التحقق من الشهادة | Shield Aden</title>
+
+<style>
+:root{
+  --navy:#0B1430;
+  --navy-2:#0F1C45;
+  --white:#FFFFFF;
+  --muted:#C7D1E6;
+  --gold:#F2C94C;
+  --line:rgba(255,255,255,.12);
+  --radius:22px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, Tahoma, Arial, "Noto Kufi Arabic", "Noto Sans Arabic", sans-serif;
+  color:var(--white);
+  background:
+    radial-gradient(1200px 800px at 70% 10%, rgba(242,201,76,.12), transparent 55%),
+    radial-gradient(900px 700px at 20% 40%, rgba(255,255,255,.08), transparent 55%),
+    linear-gradient(160deg,var(--navy),var(--navy-2));
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px 14px;
+}
+.wrap{width:100%;max-width:920px}
+header{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:18px;gap:12px;
+}
+.brand{display:flex;gap:12px;align-items:center;min-width:0}
+.logo{
+  width:44px;height:44px;border-radius:14px;
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--line);
+  display:grid;place-items:center;
+  overflow:hidden;
+}
+.logo img{width:100%;height:100%;object-fit:contain;display:block}
+.brand-title{font-weight:800;letter-spacing:.3px;line-height:1.1}
+.brand-sub{font-size:12px;color:var(--muted);margin-top:4px}
+.badge{
+  padding:8px 14px;border-radius:999px;border:1px solid var(--line);
+  font-size:12px;color:var(--muted);white-space:nowrap;
+}
+
+.card{
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+}
+.title{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+.check{
+  width:58px;height:58px;border-radius:18px;
+  background:rgba(242,201,76,.14);
+  border:1px solid rgba(242,201,76,.28);
+  display:grid;place-items:center;
+  color:var(--gold);font-size:26px;
+}
+h2{margin:0;font-size:20px}
+.sub{color:var(--muted);font-size:13px;margin-top:4px}
+
+.grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;
+}
+@media (max-width:620px){.grid{grid-template-columns:1fr}}
+
+.field{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:14px;
+  min-height:74px;
+  background:rgba(255,255,255,.04);
+}
+.field .k{color:var(--muted);font-size:12px;margin-bottom:8px}
+.field .v{
+  height:18px;border-radius:10px;
+  background:rgba(255,255,255,.08);
+}
+
+.actions{display:flex;gap:12px;margin-top:18px}
+.btn{
+  padding:12px 16px;border-radius:14px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.06);
+  color:var(--muted);
+  font-weight:700;
+  opacity:.65;
+  cursor:not-allowed;
+  user-select:none;
+}
+footer{margin-top:16px;text-align:center;font-size:12px;color:var(--muted)}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <div class="logo">
+        <!-- الشعار Online -->
+        <img src="https://k.top4top.io/p_3645otu380.png" alt="Shield Aden Logo">
+      </div>
+      <div style="min-width:0">
+        <div class="brand-title">SHIELD ADEN</div>
+        <div class="brand-sub">منصة التحقق من الشهادات</div>
+      </div>
+    </div>
+    <div class="badge">Online</div>
+  </header>
+
+  <section class="card">
+    <div class="title">
+      <div class="check">✓</div>
+      <div>
+        <h2>تم التحقق من الشهادة</h2>
+        <div class="sub">واجهة عرض فقط (بدون تحميل/طباعة فعلية)</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="field"><div class="k">اسم المتدرب</div><div class="v"></div></div>
+      <div class="field"><div class="k">رقم الشهادة</div><div class="v"></div></div>
+      <div class="field"><div class="k">اسم الدورة</div><div class="v"></div></div>
+      <div class="field"><div class="k">تاريخ الإصدار</div><div class="v"></div></div>
+    </div>
+
+    <div class="actions">
+      <div class="btn" aria-disabled="true">طباعة الشهادة</div>
+    </div>
+  </section>
+
+  <footer>Shield Aden Security Services ©</footer>
+
+</div>
+</body>
+</html>
