@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>منصة الجنوب بلس الإعلامية</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--g:#17403A;--g2:#7A8F8B;--r:#C8101A;--r2:#E0505A;--w:#F2F2F2;--bg:#F4F6F5;--card:#fff;--tx:#14201E;--mu:#5d6b68;--bd:#dde3e1;--hd:#17403A;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1A18;--card:#152522;--tx:#EEF2F1;--mu:#9fb0ac;--bd:#244039;--hd:#0B1412}}
+:root[data-theme="dark"]{--bg:#0E1A18;--card:#152522;--tx:#EEF2F1;--mu:#9fb0ac;--bd:#244039;--hd:#0B1412}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Cairo','Tajawal',Tahoma,sans-serif;line-height:1.7}
+button{font-family:inherit;cursor:pointer}
+header{background:var(--hd);color:var(--w);position:sticky;top:0;z-index:10;padding-top:env(safe-area-inset-top,0px)}
+.top{display:flex;align-items:center;gap:14px;padding:10px 20px;max-width:1200px;margin:auto;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;flex:1;min-width:240px}
+.brand svg{height:52px;width:auto;flex:none}
+.brand b{display:block;font-size:1.1rem;font-weight:900}.brand span{font-size:.82rem;color:#c9d6d3}
+.btn{border:0;border-radius:8px;padding:8px 14px;font-weight:700;font-size:.9rem;background:var(--r);color:#fff}
+.btn.ghost{background:transparent;border:1px solid var(--g2);color:var(--w)}
+nav{background:var(--g);border-top:1px solid #ffffff22}
+nav div{display:flex;gap:4px;max-width:1200px;margin:auto;padding:0 14px;overflow-x:auto}
+nav button{background:none;border:0;color:#dfe8e6;padding:11px 16px;font-weight:700;font-size:.95rem;border-bottom:3px solid transparent;white-space:nowrap}
+nav button.on{color:#fff;border-color:var(--r)}
+.ticker{background:var(--r);color:#fff;display:flex;align-items:center;overflow:hidden}
+.ticker strong{background:#8f0b12;padding:6px 16px;flex:none;z-index:1}
+.track{display:inline-block;white-space:nowrap;padding-right:100%;animation:mv 40s linear infinite}
+.track:hover{animation-play-state:paused}.track i{margin:0 28px;font-style:normal;opacity:.7}
+@keyframes mv{from{transform:translateX(0)}to{transform:translateX(100%)}}
+main{max-width:1200px;margin:auto;padding:20px;display:grid;grid-template-columns:1fr 320px;gap:24px}
+@media(max-width:900px){main{grid-template-columns:1fr}}
+.ph{position:relative;background:linear-gradient(135deg,var(--g),var(--g2));overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph::after{content:"+";position:absolute;left:12px;bottom:6px;font-size:2.4rem;font-weight:900;color:var(--r2);opacity:.55}
+.hero{border-radius:14px;overflow:hidden;cursor:pointer;display:block;min-height:340px;position:relative;color:#fff}
+.hero .ph{position:absolute;inset:0}
+.hero .tx{position:absolute;inset:auto 0 0 0;padding:60px 24px 22px;background:linear-gradient(transparent,#000000cc)}
+.hero h2{margin:6px 0 0;font-size:1.7rem;line-height:1.5}
+.tag{display:inline-block;background:var(--r);color:#fff;font-size:.75rem;font-weight:700;padding:2px 10px;border-radius:20px}
+.sec{display:flex;align-items:center;gap:10px;margin:26px 0 14px;font-size:1.25rem;font-weight:900;color:var(--g)}
+:root[data-theme="dark"] .sec{color:var(--w)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sec{color:var(--w)}}
+.sec::before{content:"";width:6px;height:24px;background:var(--r);border-radius:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden;cursor:pointer;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 20px #0002}
+.card .ph{height:140px}.card div.b{padding:12px 14px}
+.card h3{margin:6px 0;font-size:1rem;line-height:1.55}.meta{font-size:.78rem;color:var(--mu)}
+aside .box{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;position:sticky;top:130px}
+.mr{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--bd);cursor:pointer}
+.mr:last-child{border:0}.mr em{font-style:normal;font-size:1.5rem;font-weight:900;color:var(--r);width:26px;flex:none}
+.mr b{font-size:.92rem;line-height:1.5;display:block}
+.ov{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.ov.on{display:flex}
+.modal{background:var(--card);border-radius:14px;max-width:720px;width:100%;max-height:92vh;overflow:auto;position:relative}
+.modal .ph{height:260px}.modal .in{padding:20px 24px 26px}.modal h2{margin:8px 0;line-height:1.5}
+.x{position:absolute;top:10px;left:10px;background:#000a;color:#fff;border:0;width:34px;height:34px;border-radius:50%;font-size:1.2rem;z-index:2}
+.modal p{white-space:pre-wrap;font-size:1.05rem}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+label{display:block;font-weight:700;margin:10px 0 4px;font-size:.9rem}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font-family:inherit;font-size:1rem}
+footer{background:var(--hd);color:#dfe8e6;margin-top:30px;border-top:4px solid var(--r);padding-bottom:env(safe-area-inset-bottom,0px)}
+.fi{max-width:1200px;margin:auto;padding:28px 20px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+@media(max-width:800px){.fi{grid-template-columns:1fr}}
+footer h4{margin:0 0 8px;color:#fff}footer a{color:#fff;text-decoration:none}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--g);color:#fff;padding:10px 20px;border-radius:30px;display:none;z-index:60}
+</style>
+</head>
+<body>
+<header>
+ <div class="top">
+  <div class="brand">
+   <svg viewBox="0 0 300 120" aria-label="شعار الجنوب بلس">
+    <defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#17403A"/><stop offset=".5" stop-color="#7A8F8B"/><stop offset="1" stop-color="#17403A"/></linearGradient></defs>
+    <path d="M60 8H292V70Q292 112 250 112H8V60Q8 8 60 8Z" fill="url(#lg)" stroke="#F2F2F2" stroke-opacity=".25"/>
+    <path d="M28 38h22V22h24v16h22v24H74v26H50V62H28z" fill="#C8101A"/>
+    <text x="270" y="86" text-anchor="end" font-family="Cairo" font-weight="900" font-size="64" fill="#F2F2F2">الجنوب</text>
+   </svg>
+   <div><b>منصة الجنوب بلس الإعلامية</b><span>الجنوب.. قضية وهوية وتاريخ</span></div>
+  </div>
+  <button class="btn ghost" id="theme">🌓 الوضع</button>
+  <button class="btn" id="adminBtn">＋ لوحة التحكم</button>
+ </div>
+ <div class="ticker"><strong>عاجل</strong><div style="overflow:hidden;flex:1"><span class="track" id="track"></span></div></div>
+ <nav><div id="nav"></div></nav>
+</header>
+
+<main>
+ <section id="content"></section>
+ <aside><div class="box"><div class="sec" style="margin-top:0">الأكثر قراءة</div><div id="most"></div></div></aside>
+</main>
+
+<footer><div class="fi">
+ <div><h4>منصة الجنوب بلس</h4><p>منصة الجنوب بلس | منصة إخبارية وإعلامية رقمية متخصصة في تغطية الأحداث وصناعة المحتوى الإعلامي ونقل الحقيقة من قلب الجنوب</p></div>
+ <div><h4>تواصل معنا</h4><p>📍 العاصمة عدن<br>✉️ <a href="mailto:aljanoubplus@gmail.com">aljanoubplus@gmail.com</a></p></div>
+ <div><h4>حساباتنا</h4><p>Facebook / Instagram: <a>@jnplusjbp</a><br><a>@aljanoubplus</a></p></div>
+</div></footer>
+
+<div class="ov" id="ovArt"><div class="modal" id="art"></div></div>
+<div class="ov" id="ovAdm"><div class="modal"><button class="x" data-close>×</button><div class="in">
+ <h2>إضافة خبر جديد</h2>
+ <label>العنوان</label><input id="fT">
+ <label>التصنيف</label><select id="fC"><option>أخبار الجنوب</option><option>تقارير وتحليلات</option><option>قضايا وتاريخ</option><option>مرئيات</option></select>
+ <label>رابط الصورة (اختياري)</label><input id="fI" dir="ltr" placeholder="https://...">
+ <label>أو ارفع صورة</label><input type="file" id="fF" accept="image/*">
+ <label>نص الخبر</label><textarea id="fB" rows="6"></textarea>
+ <div class="row"><button class="btn" id="pub">نشر الخبر</button><label style="margin:0"><input type="checkbox" id="fU" style="width:auto"> خبر عاجل</label></div>
+</div></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+var CATS=['الرئيسية','أخبار الجنوب','تقارير وتحليلات','قضايا وتاريخ','مرئيات'];
+var N=[
+{id:1,t:'عناوين تجريبية: انطلاق منصة الجنوب بلس بحلّتها الجديدة',c:'أخبار الجنوب',d:'2026-10-28',v:320,u:1,b:'هذا محتوى تجريبي لعرض شكل الموقع. استبدل هذه الأخبار بأخبارك عبر زر لوحة التحكم.\n\nيمكنك إضافة العنوان والتصنيف والصورة ونص الخبر، وسيظهر فوراً في الصفحة الرئيسية.'},
+{id:2,t:'تقرير تجريبي: قراءة في المشهد الإعلامي المحلي',c:'تقارير وتحليلات',d:'2026-10-27',v:210,u:1,b:'نص تجريبي لتقرير تحليلي. يمكن حذف هذا المحتوى وإضافة تقاريرك الحقيقية.'},
+{id:3,t:'ملف تجريبي: محطات من تاريخ الجنوب',c:'قضايا وتاريخ',d:'2026-10-26',v:180,u:0,b:'نص تجريبي لملف تاريخي. أضف موادك التاريخية من لوحة التحكم.'},
+{id:4,t:'مرئيات تجريبية: جولة مصوّرة في العاصمة عدن',c:'مرئيات',d:'2026-10-25',v:95,u:0,b:'نص تجريبي لمادة مرئية.'},
+{id:5,t:'خبر تجريبي: متابعة لأبرز أحداث الأسبوع في الجنوب',c:'أخبار الجنوب',d:'2026-10-24',v:140,u:0,b:'نص تجريبي لخبر محلي.'},
+{id:6,t:'تحليل تجريبي: اتجاهات الرأي العام الرقمي',c:'تقارير وتحليلات',d:'2026-10-23',v:120,u:0,b:'نص تجريبي لتحليل.'},
+{id:7,t:'قضية تجريبية: الهوية الثقافية والتراث',c:'قضايا وتاريخ',d:'2026-10-22',v:75,u:0,b:'نص تجريبي لقضية ثقافية.'},
+{id:8,t:'مرئيات تجريبية: لقطات من الميدان',c:'مرئيات',d:'2026-10-21',v:60,u:0,b:'نص تجريبي.'}];
+var cur='الرئيسية',nid=100,$=function(i){return document.getElementById(i)};
+try{var s=JSON.parse(localStorage.getItem('jp_news'));if(s&&s.length){N=s;nid=Math.max.apply(0,N.map(function(n){return n.id}))+1}}catch(e){}
+function save(){try{localStorage.setItem('jp_news',JSON.stringify(N))}catch(e){}}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function fd(d){try{return new Date(d).toLocaleDateString('ar',{year:'numeric',month:'long',day:'numeric'})}catch(e){return d}}
+function ph(n){return '<div class="ph">'+(n.img?'<img src="'+esc(n.img)+'" alt="" onerror="this.remove()">':'')+'</div>'}
+function nav(){$('nav').innerHTML=CATS.map(function(c){return '<button class="'+(c==cur?'on':'')+'" data-c="'+c+'">'+c+'</button>'}).join('')}
+function card(n){return '<div class="card" data-id="'+n.id+'">'+ph(n)+'<div class="b"><span class="tag">'+esc(n.c)+'</span><h3>'+esc(n.t)+'</h3><div class="meta">'+fd(n.d)+' · '+n.v+' قراءة</div></div></div>'}
+function render(){
+ nav();
+ var list=N.slice().sort(function(a,b){return b.id-a.id});
+ $('track').innerHTML=(list.filter(function(n){return n.u}).concat(list).slice(0,6)).map(function(n){return esc(n.t)}).join('<i>◆</i>')+'<i>◆</i>';
+ var f=cur=='الرئيسية'?list:list.filter(function(n){return n.c==cur});
+ var h='';
+ if(!f.length){h='<p class="meta">لا توجد أخبار في هذا القسم بعد.</p>'}
+ else{
+  var hero=f.filter(function(n){return n.u})[0]||f[0];
+  h='<div class="hero" data-id="'+hero.id+'">'+ph(hero)+'<div class="tx"><span class="tag">خبر رئيسي · '+esc(hero.c)+'</span><h2>'+esc(hero.t)+'</h2></div></div>';
+  h+='<div class="sec">'+(cur=='الرئيسية'?'أحدث الأخبار':cur)+'</div><div class="grid">'+f.filter(function(n){return n!==hero}).map(card).join('')+'</div>';
+ }
+ $('content').innerHTML=h;
+ $('most').innerHTML=N.slice().sort(function(a,b){return b.v-a.v}).slice(0,5).map(function(n,i){return '<div class="mr" data-id="'+n.id+'"><em>'+(i+1)+'</em><div><b>'+esc(n.t)+'</b><span class="meta">'+n.v+' قراءة</span></div></div>'}).join('');
+}
+function toast(m){var t=$('toast');t.textContent=m;t.style.display='block';setTimeout(function(){t.style.display='none'},2200)}
+function open(id){
+ var n=N.filter(function(x){return x.id==id})[0];if(!n)return;n.v++;save();
+ $('art').innerHTML='<button class="x" data-close>×</button>'+ph(n)+'<div class="in"><span class="tag">'+esc(n.c)+'</span><h2>'+esc(n.t)+'</h2><div class="meta">'+fd(n.d)+' · '+n.v+' قراءة</div><p>'+esc(n.b)+'</p><div class="row"><button class="btn" data-share="'+n.id+'">مشاركة الخبر</button><button class="btn ghost" style="color:var(--tx);border-color:var(--bd)" data-del="'+n.id+'">حذف</button></div></div>';
+ $('ovArt').classList.add('on');
+}
+document.addEventListener('click',function(e){
+ var t=e.target,x;
+ if(x=t.closest('[data-close]')){x.closest('.ov').classList.remove('on');render();return}
+ if(t.classList.contains('ov')){t.classList.remove('on');render();return}
+ if(x=t.closest('[data-share]')){var n=N.filter(function(a){return a.id==x.dataset.share})[0],txt=n.t+' — منصة الجنوب بلس';
+  if(navigator.share){navigator.share({title:n.t,text:txt}).catch(function(){})}
+  else{try{navigator.clipboard.writeText(txt).then(function(){toast('تم نسخ الخبر')})}catch(er){toast(txt)}}return}
+ if(x=t.closest('[data-del]')){N=N.filter(function(a){return a.id!=x.dataset.del});save();$('ovArt').classList.remove('on');render();return}
+ if(x=t.closest('[data-c]')){cur=x.dataset.c;render();return}
+ if(x=t.closest('[data-id]')){open(x.dataset.id)}
+});
+$('adminBtn').onclick=function(){$('ovAdm').classList.add('on')};
+$('theme').onclick=function(){var r=document.documentElement,d=r.dataset.theme?r.dataset.theme=='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark'};
+var upImg='';
+$('fF').onchange=function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){upImg=r.result};r.readAsDataURL(f)};
+$('pub').onclick=function(){
+ var t=$('fT').value.trim(),b=$('fB').value.trim();
+ if(!t||!b){toast('أدخل العنوان ونص الخبر');return}
+ N.push({id:nid++,t:t,c:$('fC').value,d:new Date().toISOString().slice(0,10),v:0,u:$('fU').checked?1:0,img:upImg||$('fI').value.trim(),b:b});
+ save();['fT','fB','fI','fF'].forEach(function(i){$(i).value=''});upImg='';$('fU').checked=false;
+ $('ovAdm').classList.remove('on');cur='الرئيسية';render();toast('تم نشر الخبر');
+};
+render();
+</script>
+</body>
+</html>
